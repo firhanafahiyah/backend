@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            margin: 50px 350px;
+            width: 500px;
+            height: 300px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function dekor1() {
+            dekor_1 = document.getElementById("home");
+            dekor_1.style.color = "aqua";
+        }
+
+        function dekor2() {
+            dekor_2 = document.getElementById("home");
+            dekor_2.style.color = "black";
+        }
+        
+        function imagepicker() {
+            const list_image = ["kambing.jpg", "komodo.jpg", "singa.jpg", "siput.jpg",]
+            let pilihan = document.getElementById("option");
+            if(pilihan.value == "komodo") {
+                let select = list_image[0];
+                document.getElementById("image").src = image/$;{select}
+                alert("Ini gambar komodo.jpg")
+            }
+            
+
+            if(pilihan.value == "singa") {
+                let select = list_image[1];
+                document.getElementById("image").src = image/$;{select}
+                alert("Ini gambar singa.jpg")
+            }
+
+            if(pilihan.value == "kambing") {
+                let select = list_image[2];
+                document.getElementById("image").src = image/$;{select}
+                alert("Ini gambar kambing.jpg")
+            }
+
+            if(pilihan.value == "siput") {
+                let select = list_image[3];
+                document.getElementById("image").src = image/$;{select}
+                alert("Ini gambar siput.jpg")
+            }
+
+            if(pilihan.value == "kambing") {
+                let select = list_image[4];
+                document.getElementById("image").src = image/$;{select}
+                alert("Ini gambar kambing.jpg")
+            }    
+        }
+    </script>
+</head>
+<body>
+    <a href="" onmouseover="dekor1()" onmouseout="dekor2()" id="home"><h1>Welcome to mohammad firhan Image Picker</h1></a>
+    <hr>
+    <br>
+    <select id="option" onchange="imagepicker()">
+        <option value="" selected>Pilih Gambar</option>
+        <option value="kambing">kambing</option>
+        <option value="singa">singa</option>
+        <option value="komodo">komodo</option>
+        <option value="siput">siput</option>
+    </select>
+    <br>
+    <div class="container" id="container">
+        <div class="box" id="box">
+            <img id="image">
+        </div>
+    </div>
+
+
+</body>
+</html>
